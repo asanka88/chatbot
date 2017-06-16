@@ -15,7 +15,9 @@
 </head>
 
 <body ng-app="chatApp">
-    <h1>welcome to chatbot</h1>
+<div class="row">
+    <div class="col-12 col-md-4"><br/></div>
+</div>
 
     <div class="row">
         <div class="col-6 col-md-4"></div>
@@ -61,10 +63,10 @@
 
                 </div>
                 <div class="row container-fluid align-items-center">
-                    <form ng-submit="send()">
+                    <form ng-submit="send()"  ui-keypress="{13:'send()'}">
                     <div class="col-md-10 ">
                         <div class="form-group align-middle justify-content-md-center">
-                            <textarea class="form-control  justify-content-md-center" id="exampleTextarea" ng-model="msgString" rows="2"></textarea>
+                            <input class="form-control  justify-content-md-center" id="exampleTextarea" ng-model="msgString" rows="2"></input>
                         </div>
                     </div>
                     <div class="col-md-2 col align-self-start zeropadding"><button type="submit" class="btn btn-primary">Send</button>
